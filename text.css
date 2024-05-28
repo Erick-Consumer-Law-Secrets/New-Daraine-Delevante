@@ -1,0 +1,51 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.color-swap {
+    display: flex;
+    gap: 20px;
+}
+
+.text {
+    font-size: 22px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.text1 {
+    color: #ab2532; /* Initial color for Text 1 */
+}
+
+.text2 {
+    font-weight: bold;
+    color: #ffffff; /* Initial color for Text 2 */
+    text-shadow: 0 0 10px rgba(51, 181, 255, 0.7); /* Glow effect for Text 2 */
+}
+
+.color-swap:hover .text1 {
+    color: #ffffff; /* Color for Text 1 on hover */
+    /* This controls the 3D shadow effect */
+  text-shadow:
+		0 1px 0 #737373,
+		0 2px 0 #666666,
+		0 3px 0 #595959,
+		0 4px 0 #4d4d4d,
+		0 5px 0 #404040,
+		0 6px 1px rgba(0,0,0,.1),
+		0 0 5px rgba(0,0,0,.1),
+		0 1px 3px rgba(0,0,0,.3),
+		0 3px 5px rgba(0,0,0,.2),
+		0 5px 10px rgba(0,0,0,.25),
+		0 10px 10px rgba(0,0,0,.2),
+		0 20px 20px rgba(0,0,0,.15);
+	transition: 0.5s;
+}
+
+.color-swap:hover .text2 {
+    color: #ab2532; /* Color for Text 2 on hover */
+    	text-shadow: none;
+	-webkit-transform: scale(1.01);
+	-ms-transform: scale(1.01);
+	transform: scale(1.01);
+	transition: 0.5s;
+}
